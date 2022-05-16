@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-configmap
+  namespace: desenvolvimento-frontend
+data:
+  PREFIX: "/orders"
+  
+  
+  
