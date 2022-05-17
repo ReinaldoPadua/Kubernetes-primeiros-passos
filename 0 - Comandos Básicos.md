@@ -25,6 +25,15 @@ kubectl logs coredns-d76bd69b-jpj4x -n kube-system
 kubectl get pod -n desenvolvimento-frontend
 ```
 
+## ConfigMap
+
+```
+kubectl get configmap -n desenvolvimento-frontend
+
+kubectl delete configmap frontend-configmap -n desenvolvimento-frontend
+
+```
+
 ## Deployment
 
 ```
@@ -34,6 +43,14 @@ kubectl get deployment -n desenvolvimento-frontend
 
 kubectl delete deployment frontend-deployment  -n desenvolvimento-frontend
 
+```
+
+## Autoscaling
+
+```
+kubectl get HorizontalPodAutoscaler -n desenvolvimento-frontend
+
+kubectl delete HorizontalPodAutoscaler frontend-autoscaling -n desenvolvimento-frontend
 ```
 
 ## Service
@@ -55,22 +72,5 @@ kubectl apply -f '.\4 - ingress.yaml'
 kubectl get ingress -n desenvolvimento-frontend
 
 kubectl delete ingress frontend-ingress  -n desenvolvimento-frontend
-
-```
-
-## Autoscaling
-
-```
-kubectl get HorizontalPodAutoscaler -n desenvolvimento-frontend
-
-kubectl delete HorizontalPodAutoscaler frontend-autoscaling -n desenvolvimento-frontend
-```
-
-## ConfigMap
-
-```
-kubectl get configmap -n desenvolvimento-frontend
-
-kubectl delete configmap frontend-configmap -n desenvolvimento-frontend
 
 ```
